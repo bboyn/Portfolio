@@ -1,39 +1,60 @@
-/* Temel ayarlar */
+/* ===== Tema Değişkenleri ===== */
 :root{
+  --max: 980px;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.06);
+
+  /* Light varsayılan */
   --bg: #f5f6f8;
-  --text: #111;
+  --surface: #ffffff;
+  --text: #111111;
   --muted: #6b7280;
   --line: #d7dbe2;
-  --card: #ffffff;
-  --shadow: 0 10px 30px rgba(0,0,0,.06);
-  --radius: 14px;
-  --max: 980px;
+  --topbar: rgba(245,246,248,.75);
+  --accent: #60a5fa;
 }
 
+html[data-theme="dark"]{
+  --bg: #0b1220;
+  --surface: #0f172a;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --line: rgba(148,163,184,.22);
+  --topbar: rgba(11,18,32,.70);
+  --shadow: 0 12px 34px rgba(0,0,0,.35);
+  --accent: #93c5fd;
+}
+
+/* ===== Temel ===== */
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
+
 body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
   color: var(--text);
-  background: radial-gradient(1200px 500px at 50% 0%, #ffffff 0%, var(--bg) 55%, var(--bg) 100%);
+  background: radial-gradient(1200px 500px at 50% 0%, rgba(255,255,255,.55) 0%, var(--bg) 55%, var(--bg) 100%);
   line-height: 1.5;
 }
 
-/* Konteyner */
+/* Dark modda üstteki glow daha kontrollü olsun */
+html[data-theme="dark"] body{
+  background: radial-gradient(1200px 500px at 50% 0%, rgba(59,130,246,.12) 0%, var(--bg) 55%, var(--bg) 100%);
+}
+
 .container{
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
 }
 
-/* Üst bar */
+/* ===== Üst Bar ===== */
 .topbar{
   position: sticky;
   top: 0;
   z-index: 10;
   backdrop-filter: blur(10px);
-  background: rgba(245,246,248,.75);
-  border-bottom: 1px solid rgba(215,219,226,.9);
+  background: var(--topbar);
+  border-bottom: 1px solid var(--line);
 }
 
 .topbar__inner{
@@ -57,9 +78,9 @@ body{
   display: grid;
   place-items: center;
   border-radius: 9px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
-  box-shadow: 0 6px 14px rgba(0,0,0,.05);
+  box-shadow: var(--shadow);
 }
 
 .brand__text{
@@ -69,23 +90,40 @@ body{
 
 .nav{
   display: inline-flex;
-  gap: 22px;
+  align-items: center;
+  gap: 18px;
 }
 
 .nav__link{
   text-decoration: none;
-  color: #1f2937;
+  color: inherit;
   padding: 6px 2px;
   border-bottom: 2px solid transparent;
 }
 
 .nav__link:hover,
 .nav__link:focus-visible{
-  border-bottom-color: #60a5fa;
+  border-bottom-color: var(--accent);
   outline: none;
 }
 
-/* Sayfa başlığı */
+/* Tema butonu */
+.theme-btn{
+  margin-left: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  font-size: 14px;
+}
+
+.theme-btn:hover{ filter: brightness(0.98); }
+.theme-btn:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ===== Başlık ===== */
 .page-head{
   padding: 48px 0 26px;
   text-align: center;
@@ -104,10 +142,8 @@ body{
   background: linear-gradient(90deg, transparent, var(--line), transparent);
 }
 
-/* Bölümler */
-.section{
-  padding: 28px 0;
-}
+/* ===== Bölümler ===== */
+.section{ padding: 28px 0; }
 
 .section__title{
   margin: 0 0 14px;
@@ -116,14 +152,15 @@ body{
 }
 
 .muted{ color: var(--muted); }
+.small{ font-size: 13px; }
 
-/* Kart */
+/* ===== Kart ===== */
 .card{
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 16px 16px;
+  padding: 16px;
 }
 
 .card__title{
@@ -131,7 +168,7 @@ body{
   font-size: 16px;
 }
 
-/* About grid */
+/* ===== About grid ===== */
 .about-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -142,7 +179,7 @@ body{
   .about-grid{ grid-template-columns: 1fr; }
 }
 
-/* Liste */
+/* ===== Liste ===== */
 .list{
   margin: 0;
   padding-left: 18px;
@@ -150,17 +187,15 @@ body{
 
 .list li{ margin: 6px 0; }
 
-/* Proje */
+/* ===== Proje ===== */
 .project{
   padding: 18px 0 28px;
-  border-bottom: 1px solid rgba(215,219,226,.7);
+  border-bottom: 1px solid var(--line);
 }
 
 .project:last-child{ border-bottom: 0; }
 
-.project__head{
-  margin-bottom: 12px;
-}
+.project__head{ margin-bottom: 12px; }
 
 .project__title{
   margin: 0;
@@ -172,7 +207,7 @@ body{
   color: var(--muted);
 }
 
-/* Medya grid */
+/* ===== Medya grid ===== */
 .media-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -184,49 +219,20 @@ body{
   .media-grid{ grid-template-columns: 1fr; }
 }
 
-.media{
-  margin: 0;
-}
+.media{ margin: 0; }
 
 .media__link{
   display: block;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--surface);
   box-shadow: var(--shadow);
 }
 
 .media__img{
   width: 100%;
   height: auto;
-  display: block;
-}
-
-.media__video{
-  width: 100%;
-  display: block;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: #000;
-  box-shadow: var(--shadow);
-}
-
-/* Embed (YouTube/Vimeo) için 16:9 oran */
-.media__embed{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: #000;
-  box-shadow: var(--shadow);
-}
-
-.media__embed iframe{
-  width: 100%;
-  height: 100%;
-  border: 0;
   display: block;
 }
 
@@ -237,7 +243,7 @@ body{
   font-size: 14px;
 }
 
-/* Proje etiket/linkleri */
+/* ===== Etiketler ===== */
 .project__meta{
   display: flex;
   flex-wrap: wrap;
@@ -252,9 +258,9 @@ body{
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--surface);
   text-decoration: none;
-  color: #111;
+  color: var(--text);
   font-size: 14px;
 }
 
@@ -265,7 +271,7 @@ body{
   color: var(--muted);
 }
 
-/* Contact */
+/* ===== Contact ===== */
 .contact{
   display: flex;
   flex-wrap: wrap;
@@ -274,15 +280,17 @@ body{
 }
 
 .contact__link{
-  color: #111;
+  color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid rgba(17,17,17,.25);
+  border-bottom: 1px solid rgba(127,127,127,.35);
   padding-bottom: 2px;
 }
 
-.contact__link:hover{ border-bottom-color: rgba(17,17,17,.65); }
+.contact__link:hover{
+  border-bottom-color: rgba(127,127,127,.75);
+}
 
-/* Footer */
+/* ===== Footer ===== */
 .footer{
   padding: 18px 0 40px;
   text-align: center;

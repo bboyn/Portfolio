@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio</title>
-  <meta name="description" content="Portfolyo web sitesi" />
+  <title>Batuhan Boynukalın | Portfolio</title>
+  <meta name="description" content="Batuhan Boynukalın - Portfolio" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -13,20 +13,25 @@
   <header class="topbar">
     <div class="topbar__inner container">
       <a class="brand" href="#top" aria-label="Ana sayfa">
-        <!-- Logo: İstersen SVG/PNG ile değiştir -->
         <span class="brand__logo" aria-hidden="true">🐙</span>
         <span class="brand__text">Portfolio</span>
       </a>
 
       <nav class="nav" aria-label="Ana menü">
         <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#projects">Projects</a>
         <a class="nav__link" href="#contact">Contact</a>
+
+        <!-- Tema butonu -->
+        <button class="theme-btn" type="button" id="themeToggle" aria-label="Tema değiştir">
+          Theme
+        </button>
       </nav>
     </div>
   </header>
 
   <main id="top" class="container">
-    <!-- Başlık / Sayfa üst boşluğu -->
+    <!-- Başlık -->
     <section class="page-head">
       <h1 class="page-title">Projects</h1>
       <div class="rule" aria-hidden="true"></div>
@@ -35,26 +40,38 @@
     <!-- ABOUT -->
     <section id="about" class="section">
       <h2 class="section__title">About</h2>
+
       <p class="muted">
-        Buraya kısa bir özet yaz: uzmanlık alanların, kullandığın teknolojiler, hedeflediğin rol.
-        CV’nden “2-3 güçlü cümle” gibi düşün.
+        I am a newly graduated Computer Engineering student from Middle East Technical University – Northern Cyprus Campus.
+        I am highly motivated to learn new technologies, enjoy working in team-oriented environments, and focus on building
+        practical and efficient software solutions.
       </p>
 
       <div class="about-grid">
         <div class="card">
-          <h3 class="card__title">Öne çıkan yetenekler</h3>
+          <h3 class="card__title">Technical Skills</h3>
           <ul class="list">
-            <li>React / TypeScript</li>
-            <li>Node.js / API tasarımı</li>
-            <li>UI/UX ve responsive arayüzler</li>
+            <li><strong>Programming:</strong> C, C++, C#, Java, Python, SQL</li>
+            <li><strong>Backend:</strong> JWT Authentication, CRUD, Layered Architecture</li>
+            <li><strong>Databases:</strong> FirebirdDB, InfluxDB</li>
+            <li><strong>Tools:</strong> Docker, WireShark</li>
+            <li><strong>Languages:</strong> Turkish (Native), English (Upper-Intermediate), Spanish (Beginner)</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3 class="card__title">Kısa CV</h3>
+          <h3 class="card__title">Education</h3>
           <p class="muted">
-            Buraya CV’nden kısa bir “özet” yapıştırabiliriz. İstersen bir sonraki adımda CV’ndeki
-            bilgileri bu alana düzenli şekilde yerleştiririm (eğitim, deneyim, sertifikalar vb.).
+            <strong>Middle East Technical University (METU) NCC</strong><br />
+            Bachelor of Computer Engineering<br />
+            2017 – 2024<br />
+            CGPA: 2.52 / 4.00
+          </p>
+
+          <p class="muted">
+            <strong>High School:</strong><br />
+            Mevsim High School, Kayseri, Türkiye<br />
+            2013 – 2017
           </p>
         </div>
       </div>
@@ -62,121 +79,160 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <!-- Proje 1 -->
+
+      <!-- Project 1 -->
       <article class="project">
         <div class="project__head">
-          <h2 class="project__title">Project Name 1</h2>
+          <h2 class="project__title">Web Accessibility Tool for Autism</h2>
           <p class="project__desc">
-            This is a web development project using React and Node.js
+            A browser extension developed to evaluate whether a website is autism-friendly
+            based on empirically tested accessibility metrics.
           </p>
         </div>
 
         <div class="media-grid">
-          <!-- Görsel -->
           <figure class="media">
-            <a class="media__link" href="assets/project1-mockup.jpg" target="_blank" rel="noopener">
-              <img
-                class="media__img"
-                src="assets/project1-mockup.jpg"
-                alt="Project Name 1 arayüz görseli"
-                loading="lazy"
-              />
+            <a class="media__link" href="assets/autism-tool.jpg" target="_blank" rel="noopener">
+              <img class="media__img" src="assets/autism-tool.jpg" alt="Extension interface screenshot" loading="lazy" />
             </a>
-            <figcaption class="media__cap">Interface Mockup</figcaption>
+            <figcaption class="media__cap">Extension Interface</figcaption>
           </figure>
 
-          <!-- Video: MP4 kullanımı -->
           <figure class="media">
-            <video class="media__video" controls preload="metadata" poster="assets/project1-video-poster.jpg">
-              <source src="assets/project1-demo.mp4" type="video/mp4" />
-              Tarayıcınız video etiketini desteklemiyor.
-            </video>
-            <figcaption class="media__cap">Demo Video</figcaption>
+            <a class="media__link" href="assets/autism-metrics.jpg" target="_blank" rel="noopener">
+              <img class="media__img" src="assets/autism-metrics.jpg" alt="Metrics visualization" loading="lazy" />
+            </a>
+            <figcaption class="media__cap">Evaluation Metrics</figcaption>
           </figure>
         </div>
 
         <div class="project__meta">
-          <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
-          <a class="pill" href="#" target="_blank" rel="noopener">GitHub</a>
-          <span class="pill pill--ghost">React</span>
-          <span class="pill pill--ghost">Node.js</span>
+          <span class="pill pill--ghost">Web Accessibility</span>
+          <span class="pill pill--ghost">Browser Extension</span>
         </div>
       </article>
 
-      <!-- Proje 2 -->
+      <!-- Project 2 -->
       <article class="project">
         <div class="project__head">
-          <h2 class="project__title">Project Name 2</h2>
+          <h2 class="project__title">Small Business Management Software</h2>
           <p class="project__desc">
-            A short film project about urban exploration<br />
-            <span class="muted">Desc</span>
+            A database-driven application designed to manage essential business operations
+            and enable efficient data querying for small businesses.
           </p>
         </div>
 
         <div class="media-grid">
-          <!-- Görsel -->
           <figure class="media">
-            <a class="media__link" href="assets/project2-still.jpg" target="_blank" rel="noopener">
-              <img
-                class="media__img"
-                src="assets/project2-still.jpg"
-                alt="Project Name 2 sahne görüntüsü"
-                loading="lazy"
-              />
+            <a class="media__link" href="assets/business-db.jpg" target="_blank" rel="noopener">
+              <img class="media__img" src="assets/business-db.jpg" alt="Database design screenshot" loading="lazy" />
             </a>
-            <figcaption class="media__cap">Still Frame</figcaption>
+            <figcaption class="media__cap">Database Design</figcaption>
           </figure>
 
-          <!-- Video: YouTube/Vimeo embed alternatifi -->
           <figure class="media">
-            <div class="media__embed" role="group" aria-label="Trailer">
-              <!-- YouTube örneği: src’yi kendi linkinle değiştir -->
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Project Name 2 Trailer"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <figcaption class="media__cap">Trailer</figcaption>
+            <a class="media__link" href="assets/business-ui.jpg" target="_blank" rel="noopener">
+              <img class="media__img" src="assets/business-ui.jpg" alt="Application UI screenshot" loading="lazy" />
+            </a>
+            <figcaption class="media__cap">User Interface</figcaption>
           </figure>
         </div>
 
         <div class="project__meta">
-          <a class="pill" href="#" target="_blank" rel="noopener">Watch</a>
-          <span class="pill pill--ghost">Film</span>
-          <span class="pill pill--ghost">Editing</span>
+          <span class="pill pill--ghost">Database</span>
+          <span class="pill pill--ghost">SQL</span>
         </div>
       </article>
+
+      <!-- Project 3 -->
+      <article class="project">
+        <div class="project__head">
+          <h2 class="project__title">Backend Project with JWT Authentication</h2>
+          <p class="project__desc">
+            A backend system developed for a job interview process, including role-based JWT authentication,
+            claims management, and full CRUD operations using layered architecture.
+          </p>
+        </div>
+
+        <div class="media-grid">
+          <figure class="media">
+            <a class="media__link" href="assets/jwt-auth.jpg" target="_blank" rel="noopener">
+              <img class="media__img" src="assets/jwt-auth.jpg" alt="JWT authentication flow diagram" loading="lazy" />
+            </a>
+            <figcaption class="media__cap">Authentication Flow</figcaption>
+          </figure>
+
+          <figure class="media">
+            <a class="media__link" href="assets/backend-architecture.jpg" target="_blank" rel="noopener">
+              <img class="media__img" src="assets/backend-architecture.jpg" alt="Layered architecture diagram" loading="lazy" />
+            </a>
+            <figcaption class="media__cap">Layered Architecture</figcaption>
+          </figure>
+        </div>
+
+        <div class="project__meta">
+          <span class="pill pill--ghost">C#</span>
+          <span class="pill pill--ghost">Entity Framework Core</span>
+          <span class="pill pill--ghost">JWT</span>
+        </div>
+      </article>
+
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
       <h2 class="section__title">Contact</h2>
+
       <div class="card">
         <p class="muted">
-          İletişim bilgilerini buraya koy. GitHub Pages için basit ve güvenilir yol:
-          e-posta + LinkedIn + GitHub linkleri.
+          Feel free to reach out for job opportunities, collaborations, or technical discussions.
         </p>
 
         <div class="contact">
-          <a class="contact__link" href="mailto:you@example.com">you@example.com</a>
-          <a class="contact__link" href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="contact__link" href="#" target="_blank" rel="noopener">GitHub</a>
+          <a class="contact__link" href="mailto:batuboynukalins@gmail.com">batuboynukalins@gmail.com</a>
+          <a class="contact__link" href="tel:+905536738014">+90 553 673 8014</a>
+          <a class="contact__link" href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+          <a class="contact__link" href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener">LinkedIn</a>
         </div>
+
+        <p class="muted small">
+          Not: GitHub ve LinkedIn linklerinde USERNAME kısmını kendi kullanıcı adlarınla değiştir.
+        </p>
       </div>
 
       <footer class="footer">
-        <span class="muted">© <span id="year"></span> Your Name</span>
+        <span class="muted">© <span id="year"></span> Batuhan Boynukalın</span>
       </footer>
     </section>
   </main>
 
   <script>
-    // Sadece yıl yazdırmak için minicik JS (istersen kaldırırız)
+    // Yıl
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Tema (Light/Dark) - localStorage ile kalıcı
+    const root = document.documentElement;
+    const btn = document.getElementById("themeToggle");
+
+    function applyTheme(t) {
+      root.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+      btn.textContent = (t === "dark") ? "Light" : "Dark";
+    }
+
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") {
+      applyTheme(saved);
+    } else {
+      // sistem teması
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      applyTheme(prefersDark ? "dark" : "light");
+    }
+
+    btn.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      applyTheme(current === "dark" ? "light" : "dark");
+    });
   </script>
 </body>
 </html>
