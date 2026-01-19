@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolyo web sitesi" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Üst bar -->
+  <header class="topbar">
+    <div class="topbar__inner container">
+      <a class="brand" href="#top" aria-label="Ana sayfa">
+        <!-- Logo: İstersen SVG/PNG ile değiştir -->
+        <span class="brand__logo" aria-hidden="true">🐙</span>
+        <span class="brand__text">Portfolio</span>
+      </a>
+
+      <nav class="nav" aria-label="Ana menü">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Başlık / Sayfa üst boşluğu -->
+    <section class="page-head">
+      <h1 class="page-title">Projects</h1>
+      <div class="rule" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <p class="muted">
+        Buraya kısa bir özet yaz: uzmanlık alanların, kullandığın teknolojiler, hedeflediğin rol.
+        CV’nden “2-3 güçlü cümle” gibi düşün.
+      </p>
+
+      <div class="about-grid">
+        <div class="card">
+          <h3 class="card__title">Öne çıkan yetenekler</h3>
+          <ul class="list">
+            <li>React / TypeScript</li>
+            <li>Node.js / API tasarımı</li>
+            <li>UI/UX ve responsive arayüzler</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">Kısa CV</h3>
+          <p class="muted">
+            Buraya CV’nden kısa bir “özet” yapıştırabiliriz. İstersen bir sonraki adımda CV’ndeki
+            bilgileri bu alana düzenli şekilde yerleştiririm (eğitim, deneyim, sertifikalar vb.).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <!-- Proje 1 -->
+      <article class="project">
+        <div class="project__head">
+          <h2 class="project__title">Project Name 1</h2>
+          <p class="project__desc">
+            This is a web development project using React and Node.js
+          </p>
+        </div>
+
+        <div class="media-grid">
+          <!-- Görsel -->
+          <figure class="media">
+            <a class="media__link" href="assets/project1-mockup.jpg" target="_blank" rel="noopener">
+              <img
+                class="media__img"
+                src="assets/project1-mockup.jpg"
+                alt="Project Name 1 arayüz görseli"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="media__cap">Interface Mockup</figcaption>
+          </figure>
+
+          <!-- Video: MP4 kullanımı -->
+          <figure class="media">
+            <video class="media__video" controls preload="metadata" poster="assets/project1-video-poster.jpg">
+              <source src="assets/project1-demo.mp4" type="video/mp4" />
+              Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <figcaption class="media__cap">Demo Video</figcaption>
+          </figure>
+        </div>
+
+        <div class="project__meta">
+          <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
+          <a class="pill" href="#" target="_blank" rel="noopener">GitHub</a>
+          <span class="pill pill--ghost">React</span>
+          <span class="pill pill--ghost">Node.js</span>
+        </div>
+      </article>
+
+      <!-- Proje 2 -->
+      <article class="project">
+        <div class="project__head">
+          <h2 class="project__title">Project Name 2</h2>
+          <p class="project__desc">
+            A short film project about urban exploration<br />
+            <span class="muted">Desc</span>
+          </p>
+        </div>
+
+        <div class="media-grid">
+          <!-- Görsel -->
+          <figure class="media">
+            <a class="media__link" href="assets/project2-still.jpg" target="_blank" rel="noopener">
+              <img
+                class="media__img"
+                src="assets/project2-still.jpg"
+                alt="Project Name 2 sahne görüntüsü"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="media__cap">Still Frame</figcaption>
+          </figure>
+
+          <!-- Video: YouTube/Vimeo embed alternatifi -->
+          <figure class="media">
+            <div class="media__embed" role="group" aria-label="Trailer">
+              <!-- YouTube örneği: src’yi kendi linkinle değiştir -->
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Project Name 2 Trailer"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <figcaption class="media__cap">Trailer</figcaption>
+          </figure>
+        </div>
+
+        <div class="project__meta">
+          <a class="pill" href="#" target="_blank" rel="noopener">Watch</a>
+          <span class="pill pill--ghost">Film</span>
+          <span class="pill pill--ghost">Editing</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="section__title">Contact</h2>
+      <div class="card">
+        <p class="muted">
+          İletişim bilgilerini buraya koy. GitHub Pages için basit ve güvenilir yol:
+          e-posta + LinkedIn + GitHub linkleri.
+        </p>
+
+        <div class="contact">
+          <a class="contact__link" href="mailto:you@example.com">you@example.com</a>
+          <a class="contact__link" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="contact__link" href="#" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span class="muted">© <span id="year"></span> Your Name</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Sadece yıl yazdırmak için minicik JS (istersen kaldırırız)
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
