@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr" data-theme="light">
+<html lang="tr" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,190 +9,577 @@
 </head>
 
 <body>
-  <!-- Üst bar -->
   <header class="topbar">
     <div class="topbar__inner container">
-      <a class="brand" href="#top" aria-label="Ana sayfa">
-        <span class="brand__logo" aria-hidden="true">🐙</span>
-        <span class="brand__text">Portfolio</span>
-      </a>
+      <a class="btn btn--outline" href="#top">My Portfolio</a>
 
       <nav class="nav" aria-label="Ana menü">
-        <a class="nav__link" href="#about">About</a>
-        <a class="nav__link" href="#projects">Projects</a>
-        <a class="nav__link" href="#contact">Contact</a>
-
-        <!-- Tema butonu -->
-        <button class="theme-btn" type="button" id="themeToggle" aria-label="Tema değiştir">
-          Theme
-        </button>
+        <a class="btn btn--outline" href="#about">About</a>
+        <a class="btn btn--outline" href="#contact">Contacts</a>
+        <button class="btn btn--outline" type="button" id="themeToggle">Theme</button>
       </nav>
     </div>
   </header>
 
-  <main id="top" class="container">
-    <!-- Başlık -->
-    <section class="page-head">
-      <h1 class="page-title">Projects</h1>
-      <div class="rule" aria-hidden="true"></div>
-    </section>
-
+  <main id="top" class="container main">
     <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2 class="section__title">About</h2>
-
-      <p class="muted">
+    <section id="about" class="block">
+      <h2 class="h2">About</h2>
+      <p class="p muted">
         I am a newly graduated Computer Engineering student from Middle East Technical University – Northern Cyprus Campus.
         I am highly motivated to learn new technologies, enjoy working in team-oriented environments, and focus on building
         practical and efficient software solutions.
       </p>
+    </section>
 
-      <div class="about-grid">
-        <div class="card">
-          <h3 class="card__title">Technical Skills</h3>
-          <ul class="list">
-            <li><strong>Programming:</strong> C, C++, C#, Java, Python, SQL</li>
-            <li><strong>Backend:</strong> JWT Authentication, CRUD, Layered Architecture</li>
-            <li><strong>Databases:</strong> FirebirdDB, InfluxDB</li>
-            <li><strong>Tools:</strong> Docker, WireShark</li>
-            <li><strong>Languages:</strong> Turkish (Native), English (Upper-Intermediate), Spanish (Beginner)</li>
-          </ul>
-        </div>
+    <!-- BASIC -->
+    <section class="block">
+      <h2 class="h2">Bed And breakfaSt In Cyprus (BASIC)</h2>
+      <p class="p muted">
+        Created a simple Java application with GUI in order to apply simple DB operations and MD5 security checks.
+      </p>
 
-        <div class="card">
-          <h3 class="card__title">Education</h3>
-          <p class="muted">
-            <strong>Middle East Technical University (METU) NCC</strong><br />
-            Bachelor of Computer Engineering<br />
-            2017 – 2024<br />
-            CGPA: 2.52 / 4.00
-          </p>
+      <div class="media-grid" style="--cols: 3;">
+        <!-- FOTO -->
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/BASIC/BASIC.png" alt="BASIC GUI" loading="lazy" />
+          <figcaption class="cap">BASIC GUI </figcaption>
+        </figure>
 
-          <p class="muted">
-            <strong>High School:</strong><br />
-            Mevsim High School, Kayseri, Türkiye<br />
-            2013 – 2017
-          </p>
-        </div>
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/BASIC/BasicSS.png" alt="BASIC Main Code" loading="lazy" />
+          <figcaption class="cap">BASIC Main Code</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/BASIC/basicss2.png" alt="BASIC Add Functionality" loading="lazy" />
+          <figcaption class="cap">BASIC Add Functionality</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <!-- Small Business -->
+    <section class="block">
+      <h2 class="h2">Small Business Management Software</h2>
+      <p class="p muted">
+        Created database to maintain the essential needs of small businesses and querying.
+      </p>
 
-      <!-- Project 1 -->
-      <article class="project">
-        <div class="project__head">
-          <h2 class="project__title">Web Accessibility Tool for Autism</h2>
-          <p class="project__desc">
-            A browser extension developed to evaluate whether a website is autism-friendly
-            based on empirically tested accessibility metrics.
-          </p>
-        </div>
+      <div class="media-grid" style="--cols: 5;">
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/352/adduser.png" alt="Small business project 1" loading="lazy" />
+          <figcaption class="cap">Add User UI</figcaption>
+        </figure>
 
-        <div class="media-grid">
-          <figure class="media">
-            <a class="media__link" href="assets/autism-tool.jpg" target="_blank" rel="noopener">
-              <img class="media__img" src="assets/autism-tool.jpg" alt="Extension interface screenshot" loading="lazy" />
-            </a>
-            <figcaption class="media__cap">Extension Interface</figcaption>
-          </figure>
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/352/branches.png" alt="Small business project 2" loading="lazy" />
+          <figcaption class="cap">Branches UI</figcaption>
+        </figure>
 
-          <figure class="media">
-            <a class="media__link" href="assets/autism-metrics.jpg" target="_blank" rel="noopener">
-              <img class="media__img" src="assets/autism-metrics.jpg" alt="Metrics visualization" loading="lazy" />
-            </a>
-            <figcaption class="media__cap">Evaluation Metrics</figcaption>
-          </figure>
-        </div>
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/352/login.png" alt="Small business project 3" loading="lazy" />
+          <figcaption class="cap">Login UI</figcaption>
+        </figure>
+        
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/352/request.png" alt="Small business project 5" loading="lazy" />
+          <figcaption class="cap">Request UI</figcaption>
+        </figure>
 
-        <div class="project__meta">
-          <span class="pill pill--ghost">Web Accessibility</span>
-          <span class="pill pill--ghost">Browser Extension</span>
-        </div>
-      </article>
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/352/logincode.png" alt="Small business project 4" loading="lazy" />
+          <figcaption class="cap">Login Code</figcaption>
+        </figure>
 
-      <!-- Project 2 -->
-      <article class="project">
-        <div class="project__head">
-          <h2 class="project__title">Small Business Management Software</h2>
-          <p class="project__desc">
-            A database-driven application designed to manage essential business operations
-            and enable efficient data querying for small businesses.
-          </p>
-        </div>
+        <figure class="media-card">
+          <img class="media" src="assets/Lisans/352/mainhtml.png" alt="Small business project 5" loading="lazy" />
+          <figcaption class="cap">Main HTML Code</figcaption>
+        </figure>
+        
+      </div>
+    </section>
 
-        <div class="media-grid">
-          <figure class="media">
-            <a class="media__link" href="assets/business-db.jpg" target="_blank" rel="noopener">
-              <img class="media__img" src="assets/business-db.jpg" alt="Database design screenshot" loading="lazy" />
-            </a>
-            <figcaption class="media__cap">Database Design</figcaption>
-          </figure>
+    <!-- WALA -->
+      <section class="block">
+    <h2 class="h2">WALA – Web Accessibility Tool for Autism</h2>
 
-          <figure class="media">
-            <a class="media__link" href="assets/business-ui.jpg" target="_blank" rel="noopener">
-              <img class="media__img" src="assets/business-ui.jpg" alt="Application UI screenshot" loading="lazy" />
-            </a>
-            <figcaption class="media__cap">User Interface</figcaption>
-          </figure>
-        </div>
+    <p class="p muted">
+      Created a web extension to evaluate whether a website is autism-friendly based on
+      empirically tested accessibility metrics and documentation for graduation project.
+    </p>
 
-        <div class="project__meta">
-          <span class="pill pill--ghost">Database</span>
-          <span class="pill pill--ghost">SQL</span>
-        </div>
-      </article>
+    <div class="media-grid" style="--cols: 3;">
+      <figure class="media-card">
+        <img class="media" src="assets/Lisans/WALA/generatedreport.png" alt="WALA extension UI">
+        <figcaption class="cap">Generated Report </figcaption>
+      </figure>
 
-      <!-- Project 3 -->
-      <article class="project">
-        <div class="project__head">
-          <h2 class="project__title">Backend Project with JWT Authentication</h2>
-          <p class="project__desc">
-            A backend system developed for a job interview process, including role-based JWT authentication,
-            claims management, and full CRUD operations using layered architecture.
-          </p>
-        </div>
+      <figure class="media-card">
+        <img class="media" src="assets/Lisans/WALA/textcomp.png" alt="WALA metrics">
+        <figcaption class="cap">Text Complexity Implementation</figcaption>
+      </figure>
 
-        <div class="media-grid">
-          <figure class="media">
-            <a class="media__link" href="assets/jwt-auth.jpg" target="_blank" rel="noopener">
-              <img class="media__img" src="assets/jwt-auth.jpg" alt="JWT authentication flow diagram" loading="lazy" />
-            </a>
-            <figcaption class="media__cap">Authentication Flow</figcaption>
-          </figure>
+      <figure class="media-card">
+        <img class="media" src="assets/Lisans/WALA/walass.png" alt="WALA analysis">
+        <figcaption class="cap">WALA Chrome Extension</figcaption>
+      </figure>
+    </div>
+  </section>
 
-          <figure class="media">
-            <a class="media__link" href="assets/backend-architecture.jpg" target="_blank" rel="noopener">
-              <img class="media__img" src="assets/backend-architecture.jpg" alt="Layered architecture diagram" loading="lazy" />
-            </a>
-            <figcaption class="media__cap">Layered Architecture</figcaption>
-          </figure>
-        </div>
+  <!-- Image Processing -->
 
-        <div class="project__meta">
-          <span class="pill pill--ghost">C#</span>
-          <span class="pill pill--ghost">Entity Framework Core</span>
-          <span class="pill pill--ghost">JWT</span>
-        </div>
-      </article>
+  <section class="block">
+  <h2 class="h2">Image Processing</h2>
 
+  <p class="p muted">
+    Applied noise removal and edge detection techniques using classical image processing
+    filters such as Sobel using MATLAB.
+  </p>
+
+  <div class="media-grid" style="--cols: 6;">
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Image/Image2as1.png" alt="Original image">
+      <figcaption class="cap">Noisy Image 1</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Image/Image2Outputas1.png" alt="Grayscale image">
+      <figcaption class="cap">Recovered Image 1</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Image/noisy2as2.png" alt="Noise reduction">
+      <figcaption class="cap">Noisy Image 2</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Image/recovered2as2.png" alt="Sobel filter">
+      <figcaption class="cap">Recovered Image 2</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Image/as1code1.png" alt="Edge detection">
+      <figcaption class="cap">Create Sobel Filter</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Image/as1code2.png" alt="Final output">
+      <figcaption class="cap">Apply Filter</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Image/as2code.png" alt="Final output">
+      <figcaption class="cap">Final Output</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+  <!-- Computer Vision -->
+
+  <section class="block">
+  <h2 class="h2">Computer Vision</h2>
+
+  <p class="p muted">
+    Classified input images into three categories using SIFT technique and applied
+    similarity matching across different scales and rotations.
+  </p>
+
+  <div class="media-grid" style="--cols: 6;">
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Vision/483as2ss1.png" alt="Input image">
+      <figcaption class="cap">Classification Loss Graph</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Vision/483as2ss2.png" alt="Keypoints">
+      <figcaption class="cap">Classification Validation Accuracy</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Vision/visionas2code2.png" alt="Descriptors">
+      <figcaption class="cap">Classification Model Train Code</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Vision/visionas2code3.png" alt="Matching result">
+      <figcaption class="cap">Classification Hyperparameters</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Vision/vision.png" alt="Scale variation">
+      <figcaption class="cap">Match Graph for Scaled and Rotated Variation</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Vision/visionas13.png" alt="Rotation invariance">
+      <figcaption class="cap">Scaled Variation</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Lisans/Vision/visionas1code.png" alt="Rotation invariance">
+      <figcaption class="cap">Keypoint SIFT Implementation</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+ 
+  <!-- Python Mastermind Game -->
+
+  <section class="block">
+  <h2 class="h2">Python Mastermind Game</h2>
+
+  <p class="p muted">
+    Created a Mastermind console game using Python and Turtle graphics to visualize
+    selected colors within the scope of Python Programming course.
+  </p>
+
+  <div class="media-grid" style="--cols: 3;">
+    <figure class="media-card">
+      <img class="media" src="assets/Python/mastermindconsole.png" alt="Mastermind game start screen">
+      <figcaption class="cap">Mastermind Console</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Python/turtlemastermind.png" alt="Mastermind gameplay">
+      <figcaption class="cap">Turtle Output</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Python/mastermindcode.png" alt="Mastermind result screen">
+      <figcaption class="cap">Mastermind Code Implementation</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+
+  <!-- Python Memory Game -->
+
+  <section class="block">
+  <h2 class="h2">Python Memory Game</h2>
+
+  <p class="p muted">
+    Developed a memory matching game with graphical user interface where players need
+    to remember card positions and match identical pairs.
+  </p>
+
+  <div class="media-grid" style="--cols: 3;">
+    <figure class="media-card">
+      <img class="media" src="assets/Python/memorygame.png" alt="Memory game board">
+      <figcaption class="cap">Memory Game</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Python/memorycode.png" alt="Memory game matching">
+      <figcaption class="cap">Memory Game Code Implementation</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+
+  <!-- MAYA -->
+  <section class="block">
+  <h2 class="h2">Maya</h2>
+
+  <p class="p muted">
+    3D modelling created using Autodesk Maya in the scope of a course in Master's education.
+  </p>
+
+  <div class="media-grid" style="--cols: 5;">
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/BeachEkranCıktısı.png" alt="Maya render 1">
+      <figcaption class="cap">Beach NURBS Modelling </figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/BearEkranResmi.png" alt="Maya render 2">
+      <figcaption class="cap">Bear</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/car.png" alt="Maya render 3">
+      <figcaption class="cap">Car</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/CatapultEkranCıktısı.png" alt="Maya render 4">
+      <figcaption class="cap">Catapult</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/GunesPanelEkranResmi.png" alt="Maya render 5">
+      <figcaption class="cap">Solar Panel</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/lambaEkranResmi1.png" alt="Maya render 5">
+      <figcaption class="cap">Lamb</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/lambaEkranResmi5.png" alt="Maya render 5">
+      <figcaption class="cap">Lamb</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/leon_uv_snapshot.jpg" alt="Maya render 5">
+      <figcaption class="cap">Child UV Snapshot</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/lock.png" alt="Maya render 5">
+      <figcaption class="cap">Old Lock</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/sapkaEkranResmi.png" alt="Maya render 5">
+      <figcaption class="cap">Hat NURBS Modelling</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/tokmak.png" alt="Maya render 5">
+      <figcaption class="cap">Judge Hammer</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/vizecannon.png" alt="Maya render 5">
+      <figcaption class="cap">Cannon</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Maya/YengecEkranCıktısı.png" alt="Maya render 5">
+      <figcaption class="cap">Crab</figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+<!-- Blender -->
+<section class="block">
+  <h2 class="h2">Blender</h2>
+
+  <p class="p muted">
+    Blender projects including modeling, rendering, and short turntable / animation outputs.
+  </p>
+
+  <div class="media-grid" style="--cols: 5;">
+    <!-- Row 1 -->
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/bina.png" alt="Blender render 1" loading="lazy">
+      <figcaption class="cap">Buildings</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/KafadanBacakEkranCiktisi.png" alt="Blender render 2" loading="lazy">
+      <figcaption class="cap">Monsters</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/LegoEkranCıktısı.png" alt="Blender render 3" loading="lazy">
+      <figcaption class="cap">LEGO</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/Odev5EkranCıktısı.png" alt="Blender render 4" loading="lazy">
+      <figcaption class="cap">Mosaic Effect</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/SıvıHacim.png" alt="Blender render 5" loading="lazy">
+      <figcaption class="cap">Liquid Volume</figcaption>
+    </figure>
+
+    <!-- Row 2 -->
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/100kurescript.png" alt="Blender render 6" loading="lazy">
+      <figcaption class="cap">100 Random Striped Spheres with Scripting</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/100kurescriptkodu.png" alt="Blender render 7" loading="lazy">
+      <figcaption class="cap">100 Random Striped Spheres Code</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/2026scriptss.png" alt="Blender render 8" loading="lazy">
+      <figcaption class="cap">2026 Animation with Scripting</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/2026scriptkodu.png" alt="Blender render 9" loading="lazy">
+      <figcaption class="cap">2026 Animation Code</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/kupscript.png" alt="Blender render 10" loading="lazy">
+      <figcaption class="cap">Cube Animation with Scripting</figcaption>
+    </figure>
+
+    <!-- Row 3 -->
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/kupscriptkodu.png" alt="Blender render 11" loading="lazy">
+      <figcaption class="cap">Cube Animation Code</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/kupscript.png" alt="Blender render 12" loading="lazy">
+      <figcaption class="cap">Cube Animation with Scripting</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/kupscriptkodu.png" alt="Blender render 13" loading="lazy">
+      <figcaption class="cap">Cube Animation Code</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/numbersscript.png" alt="Blender render 14" loading="lazy">
+      <figcaption class="cap">Digit Animation with Scripting</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <img class="media" src="assets/Blender/numberscriptkodu.png" alt="Blender render 15" loading="lazy">
+      <figcaption class="cap">Digit Animation Code</figcaption>
+    </figure>
+
+    <!-- Videos (devam, 5’li akar) -->
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/airflow.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Airflow(Just Flow Effect)</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/batuyazı.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Name Animation</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/destruction_render0001-0220.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Destruction Effect</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/donutfluid.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Donut</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/hair.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Hair Effect</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/Iron-Man NanoSuitUp0001-0250.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Nano Suit Effect (Model is taken)</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/particles.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Particles</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/realistic_smoke.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Realistic Smoke</figcaption>
+    </figure>
+
+    <figure class="media-card">
+      <video class="media" controls preload="metadata">
+        <source src="assets/Blender/SplashCube_render0001-0050.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <figcaption class="cap">Ice Cube Splash</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+
+
+
+    <!-- Dungeon Disaster -->
+    <section class="block">
+      <h2 class="h2">Dungeon Disaster</h2>
+      <p class="p muted">
+        This is the first game project I have been involved in as a level design and game developer.
+        I used Unity 6 with C# programming in order to make turn-based rogue-like elemental combat game.
+      </p>
+
+      <div class="media-grid" style="--cols: 5;">
+        <!-- FOTO -->
+        <figure class="media-card">
+          <img class="media" src="assets/DungeonDisaster/choice_driven.png" alt="Dungeon screenshot 1" loading="lazy" />
+          <figcaption class="cap">Map</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img class="media" src="assets/DungeonDisaster/fight.png" alt="Dungeon screenshot 2" loading="lazy" />
+          <figcaption class="cap">Combat Gameplay</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img class="media" src="assets/DungeonDisaster/hp bar.png" alt="Dungeon screenshot 3" loading="lazy" />
+          <figcaption class="cap">Healthbar</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img class="media" src="assets/DungeonDisaster/kod1.png" alt="Dungeon screenshot 4" loading="lazy" />
+          <figcaption class="cap">Weapon Spawn Implementation</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img class="media" src="assets/DungeonDisaster/kod2.png" alt="Dungeon screenshot 2" loading="lazy" />
+          <figcaption class="cap">Audio Source Implementation</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img class="media" src="assets/DungeonDisaster/kod3.png" alt="Dungeon screenshot 3" loading="lazy" />
+          <figcaption class="cap">Reset Game Implementation</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2 class="section__title">Contact</h2>
+    <section id="contact" class="block">
+      <h2 class="h2">Contact</h2>
 
-      <div class="card">
-        <p class="muted">
-          Feel free to reach out for job opportunities, collaborations, or technical discussions.
+      <div class="contact-card">
+        <p class="p muted">
+          You can reach out for job opportunities, collaborations, or technical discussions. I am looking forward for opportunities.
         </p>
 
-        <div class="contact">
-          <a class="contact__link" href="mailto:batuboynukalins@gmail.com">batuboynukalins@gmail.com</a>
-          <a class="contact__link" href="tel:+905536738014">+90 553 673 8014</a>
-          <a class="contact__link" href="https://github.com/bboyn" target="_blank" rel="noopener">GitHub</a>
-          <a class="contact__link" href="www.linkedin.com/in/batuhan-boynukalın-592583151" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="contact-row">
+          <a class="contact-link" href="mailto:batuboynukalins@gmail.com">batuboynukalins@gmail.com</a>
+          <a class="contact-link" href="tel:+905536738014">+90 553 673 8014</a>
+          <a class="contact-link" href="https://github.com/bboyn" target="_blank" rel="noopener">GitHub</a>
+          <a class="contact-link" href="https://www.linkedin.com/in/batuhan-boynukalin-592583151/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
 
@@ -203,24 +590,20 @@
   </main>
 
   <script>
-    // Yıl
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Tema (Light/Dark) - localStorage ile kalıcı
     const root = document.documentElement;
     const btn = document.getElementById("themeToggle");
 
     function applyTheme(t) {
       root.setAttribute("data-theme", t);
       localStorage.setItem("theme", t);
-      btn.textContent = (t === "dark") ? "Light" : "Dark";
     }
 
     const saved = localStorage.getItem("theme");
     if (saved === "dark" || saved === "light") {
       applyTheme(saved);
     } else {
-      // sistem teması
       const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
       applyTheme(prefersDark ? "dark" : "light");
     }
@@ -229,6 +612,97 @@
       const current = root.getAttribute("data-theme");
       applyTheme(current === "dark" ? "light" : "dark");
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  const panel = lightbox?.querySelector(".lightbox__panel");
+  const closeBtn = document.getElementById("lightboxClose");
+
+  if (!lightbox || !panel || !closeBtn) {
+    console.warn("Lightbox elements not found. Check #lightbox and #lightboxClose.");
+    return;
+  }
+
+  function clear() {
+    const old = panel.querySelector(".lightbox__media");
+    if (old) {
+      if (old.tagName === "VIDEO") {
+        old.pause();
+        old.currentTime = 0;
+      }
+      old.remove();
+    }
+  }
+
+  function open(node) {
+    clear();
+    panel.appendChild(node);
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+  }
+
+  function close() {
+    clear();
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+  }
+
+  // FOTO: tüm img.media'lara direkt bağlan
+  document.querySelectorAll("img.media").forEach((img) => {
+    img.style.cursor = "zoom-in";
+
+    img.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const big = document.createElement("img");
+      big.className = "lightbox__media";
+      big.src = img.src; // currentSrc yerine direkt src (daha stabil)
+      big.alt = img.alt || "Image";
+      open(big);
+    });
+  });
+
+  // VIDEO: tüm video.media'lara direkt bağlan
+  document.querySelectorAll("video.media").forEach((vid) => {
+    vid.style.cursor = "zoom-in";
+
+    vid.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const source = vid.querySelector("source");
+      const src = source ? source.getAttribute("src") : vid.getAttribute("src");
+      if (!src) return;
+
+      const bigVideo = document.createElement("video");
+      bigVideo.className = "lightbox__media";
+      bigVideo.controls = true;
+      bigVideo.autoplay = true;
+      bigVideo.preload = "metadata";
+      bigVideo.src = src;
+
+      open(bigVideo);
+    });
+  });
+
+  // Kapatma
+  closeBtn.addEventListener("click", close);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) close();
+  });
+});
+
   </script>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox__panel" role="dialog" aria-modal="true">
+    <button class="lightbox__close" type="button" id="lightboxClose" aria-label="Kapat">✕</button>
+  </div>
+</div>
+
+
 </body>
 </html>

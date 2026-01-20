@@ -1,10 +1,10 @@
 /* ===== Tema Değişkenleri ===== */
 :root{
-  --max: 980px;
+  --max: 1100px;
   --radius: 14px;
-  --shadow: 0 10px 30px rgba(0,0,0,.06);
+  --shadow: 0 10px 30px rgba(0,0,0,.18);
 
-  /* Light varsayılan */
+  /* Light */
   --bg: #f5f6f8;
   --surface: #ffffff;
   --text: #111111;
@@ -15,13 +15,13 @@
 }
 
 html[data-theme="dark"]{
-  --bg: #0b1220;
-  --surface: #0f172a;
+  --bg: #070b12;
+  --surface: #0b1220;
   --text: #e5e7eb;
   --muted: #9ca3af;
-  --line: rgba(148,163,184,.22);
-  --topbar: rgba(11,18,32,.70);
-  --shadow: 0 12px 34px rgba(0,0,0,.35);
+  --line: rgba(148,163,184,.20);
+  --topbar: rgba(7,11,18,.70);
+  --shadow: 0 14px 34px rgba(0,0,0,.45);
   --accent: #93c5fd;
 }
 
@@ -33,18 +33,18 @@ body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
   color: var(--text);
-  background: radial-gradient(1200px 500px at 50% 0%, rgba(255,255,255,.55) 0%, var(--bg) 55%, var(--bg) 100%);
+  background: var(--bg); /* sade arka plan */
   line-height: 1.5;
-}
-
-/* Dark modda üstteki glow daha kontrollü olsun */
-html[data-theme="dark"] body{
-  background: radial-gradient(1200px 500px at 50% 0%, rgba(59,130,246,.12) 0%, var(--bg) 55%, var(--bg) 100%);
 }
 
 .container{
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
+}
+
+.main{
+  padding-top: 26px;
+  padding-bottom: 50px;
 }
 
 /* ===== Üst Bar ===== */
@@ -61,232 +61,164 @@ html[data-theme="dark"] body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 16px 0;
 }
 
-.brand{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.brand__logo{
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  border-radius: 9px;
-  background: var(--surface);
+/* ===== Butonlar (senin yeni navbar yapın) ===== */
+.btn{
+  appearance: none;
   border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  background: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1;
 }
 
-.brand__text{
-  font-weight: 600;
-  letter-spacing: .2px;
+.btn--outline:hover{
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--line));
+}
+
+.btn:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .nav{
   display: inline-flex;
+  gap: 12px;
   align-items: center;
-  gap: 18px;
 }
 
-.nav__link{
-  text-decoration: none;
-  color: inherit;
-  padding: 6px 2px;
-  border-bottom: 2px solid transparent;
-}
-
-.nav__link:hover,
-.nav__link:focus-visible{
-  border-bottom-color: var(--accent);
-  outline: none;
-}
-
-/* Tema butonu */
-.theme-btn{
-  margin-left: 8px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 8px 12px;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  font-size: 14px;
-}
-
-.theme-btn:hover{ filter: brightness(0.98); }
-.theme-btn:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
-
-/* ===== Başlık ===== */
-.page-head{
-  padding: 48px 0 26px;
-  text-align: center;
-}
-
-.page-title{
-  margin: 0 0 14px;
-  font-size: clamp(32px, 4vw, 44px);
+/* ===== Tipografi ===== */
+.h2{
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.6vw, 34px);
   letter-spacing: .2px;
 }
 
-.rule{
-  height: 2px;
-  width: min(520px, 100%);
-  margin: 0 auto;
-  background: linear-gradient(90deg, transparent, var(--line), transparent);
-}
-
-/* ===== Bölümler ===== */
-.section{ padding: 28px 0; }
-
-.section__title{
-  margin: 0 0 14px;
-  font-size: 20px;
-  letter-spacing: .2px;
+.p{
+  margin: 0;
+  font-size: 15px;
 }
 
 .muted{ color: var(--muted); }
-.small{ font-size: 13px; }
+
+/* ===== Bölüm blokları ===== */
+.block{
+  padding: 22px 0 28px;
+}
+
+.block + .block{
+  border-top: 1px solid var(--line);
+}
+
+/* ===== Medya Grid (en önemli kısım) ===== */
+.media-grid{
+  /* default cols; sen inline --cols:5 veriyorsun */
+  --cols: 3;
+
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(190px, 1fr));
+  gap: 22px;
+
+  margin-top: 14px;
+
+  /* ortalama */
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+}
+
+/* küçük ekranlarda otomatik düşür */
+@media (max-width: 1100px){
+  .media-grid{
+    grid-template-columns: repeat(3, minmax(190px, 1fr));
+  }
+}
+@media (max-width: 720px){
+  .media-grid{
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}
+@media (max-width: 420px){
+  .media-grid{
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ===== Kart ===== */
-.card{
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px;
-}
-
-.card__title{
-  margin: 0 0 10px;
-  font-size: 16px;
-}
-
-/* ===== About grid ===== */
-.about-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-@media (max-width: 760px){
-  .about-grid{ grid-template-columns: 1fr; }
-}
-
-/* ===== Liste ===== */
-.list{
-  margin: 0;
-  padding-left: 18px;
-}
-
-.list li{ margin: 6px 0; }
-
-/* ===== Proje ===== */
-.project{
-  padding: 18px 0 28px;
-  border-bottom: 1px solid var(--line);
-}
-
-.project:last-child{ border-bottom: 0; }
-
-.project__head{ margin-bottom: 12px; }
-
-.project__title{
-  margin: 0;
-  font-size: 22px;
-}
-
-.project__desc{
-  margin: 6px 0 0;
-  color: var(--muted);
-}
-
-/* ===== Medya grid ===== */
-.media-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  padding: 14px 0 10px;
-}
-
-@media (max-width: 760px){
-  .media-grid{ grid-template-columns: 1fr; }
-}
-
-.media{ margin: 0; }
-
-.media__link{
-  display: block;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.media__img{
+.media-card{
   width: 100%;
-  height: auto;
-  display: block;
+  max-width: 260px;              /* kartlar biraz büyüdü */
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  /* medya + caption */
+  display: grid;
+  grid-template-rows: 170px auto; /* medya yüksekliği büyüdü */
 }
 
-.media__cap{
+/* görsel/video alanı */
+.media{
+  width: 100%;
+  height: 170px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  background: #000;
+}
+
+/* Caption */
+.cap{
+  padding: 10px 10px 12px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
   text-align: center;
   color: var(--muted);
-  margin-top: 8px;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
-/* ===== Etiketler ===== */
-.project__meta{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
+/* Hover (kibar) */
+.media-card:hover{
+  transform: translateY(-2px);
+  transition: transform .15s ease;
 }
-
-.pill{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  text-decoration: none;
-  color: var(--text);
-  font-size: 14px;
-}
-
-.pill:hover{ filter: brightness(.98); }
-
-.pill--ghost{
-  background: transparent;
-  color: var(--muted);
-}
+.media-card{ transition: transform .15s ease; }
 
 /* ===== Contact ===== */
-.contact{
+.contact-card{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin-top: 12px;
+}
+
+.contact-row{
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
-.contact__link{
+.contact-link{
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid rgba(127,127,127,.35);
   padding-bottom: 2px;
 }
 
-.contact__link:hover{
+.contact-link:hover{
   border-bottom-color: rgba(127,127,127,.75);
 }
 
@@ -295,3 +227,50 @@ html[data-theme="dark"] body{
   padding: 18px 0 40px;
   text-align: center;
 }
+
+/* ===== Lightbox (tıklayınca tam ekran) ===== */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 18px;
+  background: rgba(0,0,0,.82);
+  z-index: 9999;
+}
+
+.lightbox.is-open{
+  display: grid;
+}
+
+.lightbox__panel{
+  width: min(1200px, 96vw);
+  height: min(92vh, 900px);
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,.55);
+}
+
+.lightbox__media{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain; /* kırpma yok, tam hali görünür */
+  background: #000;
+}
+
+.lightbox__close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.lightbox__close:hover{ background: rgba(0,0,0,.75); }
